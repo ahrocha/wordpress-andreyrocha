@@ -3,13 +3,6 @@ name: Deploy Astro to Plesk (SFTP, Node 22)
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - "src/**"
-      - "public/**"
-      - "package.json"
-      - "package-lock.json"
-      - "astro.config.*"
-      - ".github/workflows/deploy.yml"
 
 jobs:
   build-and-deploy:
@@ -31,7 +24,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Envia apenas a pasta dist/ para o docroot do Plesk
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
@@ -41,5 +33,5 @@ jobs:
           port: 22
           local_path: "./dist/*"
           remote_path: ${{ secrets.REMOTE_PATH }}
-          delete: "true"
+          delete_remote_files: "true"
           sftp_only: "true"
