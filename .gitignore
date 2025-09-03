@@ -20,5 +20,21 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folder
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Editor configs
+.vscode/
 .idea/
+*.swp
+
+# MacOS / Linux
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+*.log.*
