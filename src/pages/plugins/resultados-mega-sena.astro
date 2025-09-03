@@ -1,0 +1,58 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Resultados da Mega Sena"
+  description="Plugin WordPress que exibe automaticamente os últimos resultados da Mega Sena em seu site."
+  pathname="/plugins/resultados-mega-sena"
+>
+  <section style="max-width:800px; margin:0 auto; padding:2rem 1rem;">
+    <h1>Resultados da Mega Sena</h1>
+    <p>
+      O <strong>Resultados da Mega Sena</strong> é um plugin para WordPress que permite
+      exibir os números mais recentes da loteria <em>Mega Sena</em> diretamente no seu site,
+      de forma simples e automática. Ideal para blogs, portais de notícias e páginas de
+      apostas que desejam fornecer informações atualizadas sem esforço manual.
+    </p>
+
+    <h2>Principais recursos</h2>
+    <ul>
+      <li>Exibe os resultados mais recentes da Mega Sena automaticamente.</li>
+      <li>Disponível como <code>[shortcode]</code>, widget ou bloco do editor de blocos.</li>
+      <li>Layout responsivo, adaptado a qualquer tema WordPress.</li>
+      <li>Configuração mínima: basta ativar e usar o shortcode <code>[mega_sena]</code>.</li>
+    </ul>
+
+    <h2>Exemplo de uso</h2>
+    <pre style="background:#f4f4f4; padding:1rem; border-radius:.5rem; overflow-x:auto;">
+[mega_sena]
+    </pre>
+    <p>
+      Esse shortcode pode ser adicionado em páginas, posts ou widgets. O plugin cuida
+      do carregamento dos números mais recentes automaticamente.
+    </p>
+
+    <h2>Fonte de dados</h2>
+    <p>
+      Os resultados são atualizados a partir do serviço 
+      <a href="https://resultados.hurpia.com.br" target="_blank" rel="noopener noreferrer">
+        resultados.hurpia.com.br
+      </a>, garantindo que as informações estejam sempre atualizadas logo após
+      cada sorteio oficial.
+    </p>
+
+    <h2>Benefícios</h2>
+    <p>
+      Com este plugin, você mantém seu público informado sobre os sorteios da Mega Sena,
+      aumenta o tempo de permanência no site e agrega valor sem a necessidade de atualizações
+      manuais.
+    </p>
+
+    <p style="margin-top:1.5rem;">
+      🔗 <a href="https://resultados.hurpia.com.br" target="_blank" rel="noopener noreferrer">
+        Ver demonstração ao vivo
+      </a>
+    </p>
+  </section>
+</Layout>
