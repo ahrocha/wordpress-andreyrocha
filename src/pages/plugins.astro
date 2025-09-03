@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section style="text-align:center; padding:3rem 1rem;">
+    <h1 style="font-size:2.2rem; margin-bottom:1rem;">
+      Plugins WordPress
+    </h1>
+    <p style="font-size:1.1rem; max-width:700px; margin:0 auto 2rem;">
+      Aqui você encontra os plugins que desenvolvi e compartilho
+      com a comunidade WordPress.
+    </p>
+  </section>
+
+  <section style="max-width:1000px; margin:0 auto; padding:2rem 1rem;">
+    <div style="display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
+      
+      <article style="background:#fff; border-radius:.5rem; box-shadow:0 1px 4px rgba(0,0,0,.1); padding:1.5rem;">
+        <h2 style="margin-top:0; font-size:1.25rem;">
+          <a href="/plugins/aviso-postagem-antiga">
+            Aviso de Postagem Antiga
+          </a>
+        </h2>
+        <p>
+          Mostra um aviso em posts com mais de 1 ano desde a última atualização.
+          Ideal para blogs que precisam alertar leitores sobre informações desatualizadas.
+        </p>
+      </article>
+
+      <article style="background:#fff; border-radius:.5rem; box-shadow:0 1px 4px rgba(0,0,0,.1); padding:1.5rem;">
+        <h2 style="margin-top:0; font-size:1.25rem;">
+          <a href="/plugins/resultados-mega-sena">
+            Resultados da Mega Sena
+          </a>
+        </h2>
+        <p>
+          Exibe automaticamente os últimos resultados da Mega Sena no seu site,
+          facilitando a consulta de visitantes sem precisar sair da página.
+        </p>
+      </article>
+
+    </div>
+  </section>
+</Layout>

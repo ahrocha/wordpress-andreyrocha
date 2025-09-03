@@ -1,0 +1,64 @@
+---
+const siteName = "Andrey WP";
+---
+
+<style>
+  nav { background:#111827; color:#fff; }
+  .container { max-width:1200px; margin:0 auto; padding:0 1rem; }
+  .row { display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .brand { font-weight:700; font-size:1.125rem; }
+  a { color:#fff; text-decoration:none; }
+  a:hover { opacity:.85; }
+
+  /* desktop menu */
+  .menu { display:none; gap:1.25rem; align-items:center; }
+
+  /* mobile */
+  .hamb { display:inline-flex; background:none; border:0; color:#fff; font-size:1.5rem; }
+  .mobile { display:none; flex-direction:column; gap:.5rem; padding:0 1rem 1rem; background:#111827; border-top:1px solid #1f2937; }
+
+  /* breakpoints */
+  @media (min-width: 768px) {
+    .menu { display:flex; }
+    .hamb, .mobile { display:none; }
+  }
+</style>
+
+<nav>
+  <div class="container">
+    <div class="row">
+      <div class="brand"><a href="/">{siteName}</a></div>
+
+      <!-- Menu desktop -->
+      <div class="menu" role="menubar" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/temas">Temas</a>
+        <a href="/plugins">Plugins</a>
+        <a href="/sites">Sites</a>
+        <a href="/contato">Contato</a>
+      </div>
+
+      <!-- Botão mobile -->
+      <button class="hamb" id="hamb" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+
+  <!-- Menu mobile -->
+  <div class="mobile" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/temas">Temas</a>
+    <a href="/plugins">Plugins</a>
+    <a href="/sites">Sites</a>
+    <a href="/contato">Contato</a>
+  </div>
+
+  <script>
+    const hamb = document.getElementById('hamb');
+    const mobile = document.getElementById('mobileMenu');
+    hamb.addEventListener('click', () => {
+      const opened = mobile.style.display === 'flex';
+      mobile.style.display = opened ? 'none' : 'flex';
+      hamb.setAttribute('aria-expanded', String(!opened));
+    });
+  </script>
+</nav>

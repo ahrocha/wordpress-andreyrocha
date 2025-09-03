@@ -1,11 +1,60 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
+---
+import Layout from "../layouts/Layout.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-
 <Layout>
-	<Welcome />
+
+  <section style="text-align:center; padding:3rem 1rem;">
+    <h1 style="font-size:2.5rem; margin-bottom:1rem;">
+      Bem-vindo ao <strong>Andrey WP</strong>
+    </h1>
+    <p style="font-size:1.2rem; max-width:700px; margin:0 auto 2rem;">
+      Aqui você encontra meus projetos com <strong>WordPress</strong> —
+      temas, plugins e sites desenvolvidos para aprender, compartilhar e
+      facilitar a vida de outros desenvolvedores.
+    </p>
+    <a href="/plugins"
+       style="display:inline-block; background:#2563eb; color:#fff; padding:.75rem 1.5rem; border-radius:.5rem; text-decoration:none; font-weight:600;">
+      Ver Plugins
+    </a>
+    <a href="/temas"
+       style="display:inline-block; margin-left:1rem; background:#4b5563; color:#fff; padding:.75rem 1.5rem; border-radius:.5rem; text-decoration:none; font-weight:600;">
+      Ver Temas
+    </a>
+  </section>
+
+<section style="max-width:1000px; margin:0 auto; padding:2rem 1rem;">
+  <h2 style="font-size:2rem; margin-bottom:1rem; text-align:center;">
+    Últimos Projetos
+  </h2>
+  <div style="display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));">
+    
+    <article style="background:#fff; border-radius:.5rem; box-shadow:0 1px 4px rgba(0,0,0,.1); padding:1rem;">
+      <h3 style="margin-top:0;">Aviso de Postagem Antiga</h3>
+      <p>
+        Plugin que mostra um aviso em posts com mais de 1 ano desde a última atualização.
+      </p>
+      <a href="/plugins/aviso-postagem-antiga" style="color:#2563eb; font-weight:600;">
+        Saiba mais
+      </a>
+    </article>
+
+    <article style="background:#fff; border-radius:.5rem; box-shadow:0 1px 4px rgba(0,0,0,.1); padding:1rem;">
+      <h3 style="margin-top:0;">Olimpíada Todo Dia</h3>
+      <p>
+        Portal esportivo dedicado à cobertura diária do esporte olímpico no Brasil,
+        com notícias, entrevistas e bastidores dos atletas.
+      </p>
+      <a href="https://www.olimpiadatododia.com.br" target="_blank" rel="noopener noreferrer"
+         style="color:#2563eb; font-weight:600;">
+        Visitar site
+      </a>
+    </article>
+
+  </div>
+</section>
+
+
 </Layout>

@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const sites = [
+  {
+    slug: "olimpiada-todo-dia",
+    title: "Olimpíada Todo Dia",
+    url: "https://www.olimpiadatododia.com.br",
+    description:
+      "Portal esportivo dedicado à cobertura diária do esporte olímpico no Brasil, com notícias, entrevistas e bastidores dos atletas.",
+  },
+  {
+    slug: "a-bela-e-o-bigode",
+    title: "A Bela e o Bigode",
+    url: "https://www.abelaeobigode.com.br",
+    description:
+      "Blog gastronômico e de lifestyle, explorando experiências culinárias, viagens e descobertas do dia a dia.",
+  },
+  {
+    slug: "blog-andrey-rocha",
+    title: "Blog Técnico do Andrey Rocha",
+    url: "https://blog.andreyrocha.com",
+    description:
+      "Espaço onde compartilho experiências de programação, arquitetura de software, estudos, além de dicas de viagem e lifestyle.",
+  },
+];
+---
+
+<Layout>
+  <section style="text-align:center; padding:3rem 1rem;">
+    <h1 style="font-size:2.2rem; margin-bottom:1rem;">
+      Meus Sites e Blogs
+    </h1>
+    <p style="font-size:1.1rem; max-width:700px; margin:0 auto 2rem;">
+      Além dos plugins e temas para WordPress, mantenho alguns sites e blogs
+      ativos que refletem minhas paixões, experiências e projetos pessoais.
+    </p>
+  </section>
+
+  <section style="max-width:1000px; margin:0 auto; padding:2rem 1rem;">
+    <div style="display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
+      {sites.map((site) => (
+        <article style="background:#fff; border-radius:.5rem; box-shadow:0 1px 4px rgba(0,0,0,.1); padding:1.5rem;">
+          <h2 style="margin-top:0; font-size:1.25rem;">
+            <a href={`/sites/${site.slug}`}>
+              {site.title}
+            </a>
+          </h2>
+          <p>{site.description}</p>
+          <p style="margin-top:.75rem;">
+             <a href={site.url} target="_blank" rel="noopener noreferrer">
+              Visitar site oficial
+            </a>
+          </p>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>

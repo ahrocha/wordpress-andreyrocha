@@ -1,0 +1,65 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <section style="max-width:800px; margin:0 auto; padding:2rem 1rem;">
+    <h1>A Bela e o Bigode</h1>
+    <p>
+      O <strong>A Bela e o Bigode</strong> é um blog de gastronomia e lifestyle,
+      explorando experiências culinárias, viagens e histórias do dia a dia. Além do
+      conteúdo editorial, esse projeto também serve como um laboratório pessoal para
+      testar tecnologias modernas de hospedagem em nuvem e boas práticas de
+      desenvolvimento.
+    </p>
+
+    <h2>Infraestrutura em nuvem</h2>
+    <ul>
+      <li>
+        <strong>Amazon App Runner</strong> — utilizado para executar a aplicação em
+        containers, garantindo escalabilidade automática e deploy simplificado.
+      </li>
+      <li>
+        <strong>Amazon S3</strong> — armazenamento de mídias e arquivos estáticos,
+        com entrega otimizada via integração a CDN.
+      </li>
+      <li>
+        <strong>Amazon RDS</strong> — banco de dados relacional para persistência de
+        conteúdo, configurado com backups automáticos e alta disponibilidade.
+      </li>
+    </ul>
+
+    <h2>Fluxo de CI/CD</h2>
+    <p>
+      O projeto está integrado a um fluxo de <strong>CI/CD</strong> que automatiza
+      todo o ciclo de entrega:
+    </p>
+    <ul>
+      <li>
+        Builds gerados a partir do repositório Git, garantindo consistência entre
+        ambientes.
+      </li>
+      <li>
+        Deploy automático no App Runner após aprovação em branch específica.
+      </li>
+      <li>
+        Integração contínua de atualizações no banco e assets, reduzindo riscos de
+        falha durante releases.
+      </li>
+    </ul>
+
+    <h2>Benefícios alcançados</h2>
+    <p>
+      Com essa arquitetura, o site obteve maior <em>resiliência</em>,
+      <em>manutenção simplificada</em> e <em>redução do tempo de entrega</em> de
+      novas funcionalidades. Esse setup também me permitiu consolidar boas práticas
+      de <em>DevOps</em> em um ambiente de produção real.
+    </p>
+
+    <p style="margin-top:1.5rem;">
+      <a href="https://www.abelaeobigode.com.br" target="_blank" rel="noopener noreferrer">
+        Visitar site oficial
+      </a>
+    </p>
+  </section>
+</Layout>
