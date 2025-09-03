@@ -33,5 +33,4 @@ jobs:
           port: 22
           local_path: "./dist/*"
           remote_path: ${{ secrets.REMOTE_PATH }}
-          delete_remote_files: "true"
           sftp_only: "true"
