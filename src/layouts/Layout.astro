@@ -8,7 +8,7 @@ import Navbar from "../components/Navbar.astro";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Projetos WordPress de Andrey Rocha</title>
 <!-- Sinais de rede: barateiam o fetch do GA -->
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -50,6 +50,12 @@ import Navbar from "../components/Navbar.astro";
         }
       </script>
     </>
+  )}
+  {(
+	<script is:inline>
+	const DNT = navigator.doNotTrack == "1" || window.doNotTrack == "1";
+	if (DNT) { window['ga-disable-G-PTQKGPQ7H0'] = true; }
+	</script>
   )}
 	</head>
 	<body>
